@@ -7,7 +7,6 @@ const firebaseApp = firebase.initializeApp(config)
 
 const storage = getStorage(firebaseApp)
 
-//? peliculas
 
 const addToFirebaseMovieVideo = async (file) => {
     const movieRef = ref(storage, `movieVideos/${Date.now()}-${file.originalname}`)
@@ -17,7 +16,7 @@ const addToFirebaseMovieVideo = async (file) => {
     return movieUrl
 }
 
-//? cover pelicula
+
 
 const addToFirebaseMovieCover = async (file) => {
     const movieRef = ref(storage, `movieCover/${Date.now()}-${file.originalname}`)
@@ -35,8 +34,7 @@ const addToFirebaseSerieSeasonCover = async (file, name, season) => {
     return movieUrl
 }
 
-//? Serie - Name - Temporada - Cover
-//? Serie - Name - Temporada - Capitulo
+
 
 
 

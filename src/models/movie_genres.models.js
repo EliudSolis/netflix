@@ -5,6 +5,8 @@ const Genres = require("./genres.models");
 const Movies = require("./movies.models");
 
 
+
+
 const MovieGenres = db.define('movie_genres', {
     id: {
         type: DataTypes.UUID,

@@ -1,15 +1,4 @@
-//* {
-//*     error: false,
-//*     status: 201,
-//*     message: 'User created Succesfully',
-//*     data: {
-//*         id: 5,
-//*         firstName: 'Sahid',
-//*         ...
-//*     }
-//* }
 
-//? Para respuestas exitosas
 const success = ({status, data, message, res}) => {
     res.status(status).json({
         error: false,
@@ -21,7 +10,7 @@ const success = ({status, data, message, res}) => {
 
 
 
-//? Para respuestas de errores
+
 const error = ({status, data, message, res, fields}) => {
     res.status(status).json({
         error: true,
@@ -37,13 +26,7 @@ module.exports = {
     error
 }
 
-//? Error de conexion
-//? Not Found
-//? Errores de Sintaxis
-//? Errores al hacer las peticiones creacionales
 
-//* Ejemplos de usos en los servicios:
-/*
 const getAllProducts = (req, res) => {
     findAllProcts()
         .then(data => {
@@ -91,4 +74,3 @@ const getProductById = (req, res) => {
             })
         })
 }
-*/

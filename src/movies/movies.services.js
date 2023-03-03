@@ -26,7 +26,7 @@ const postMovie = async(req, res) => {
 
     const movieObj = req.body
     const movieFile = req.file
-    // const coverFile = req.files.coverImage[0]
+
 
     try {
         const movieUrl = await addToFirebaseMovieVideo(movieFile)

@@ -10,7 +10,6 @@ router.get('/me', passportJwt, userServices.getMyUser)
 router.patch('/me', passportJwt,userServices.patchMyUser)
 router.delete('/me', passportJwt, userServices.deleteMyUser)
 
-//? /api/v1/users/me
 
 router.get('/:id', userServices.getUserById)
 router.patch('/:id', userServices.patchUser)

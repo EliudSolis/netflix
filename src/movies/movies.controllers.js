@@ -5,14 +5,9 @@ const Genres = require('../models/genres.models')
 
 
 const findAllMovies = async (limit, offset) => {
-    // limit -> Cuantos quiero mostrar
-    // offset -> Donde empiezo a mostrar
+ 
 
-
-    // const queryOptions = {
-    //     limit: limit || 20,
-    //     offset: offset || 0
-    // }
+    
     [Op]
     const data = await Movies.findAndCountAll()
     return data
@@ -20,6 +15,7 @@ const findAllMovies = async (limit, offset) => {
 
 const createMovie = async (movieObj) => {
     const newMovie = {
+
         id: uuid.v4(),
         title: movieObj.title,
         synopsis : movieObj.synopsis,
@@ -32,6 +28,7 @@ const createMovie = async (movieObj) => {
         classification: movieObj.classification,
         rating: movieObj.rating
     }
+
     const data = await Movies.create(newMovie)
     return data
 }
@@ -43,7 +40,11 @@ const addGenreToMovie = async (dataObj) => {
         genreId: dataObj.genreId
     })
     return data
+
+
 }
+
+
 
 const findAllMoviesByGenre = async (genreId) => {
     const data = await Movies.findAll({

@@ -43,11 +43,13 @@ app.get('/query', (req, res) => {
     })
 })
 
-//? Ruta de ejemplo para subir imagenes
+
 app.post('/upload-file',upload.fields([{name: 'coverImage', maxCount: 1}, {name: 'movieVideo', maxCount: 1}]), (req, res) => {
     const file = req.files
     res.status(200).json({file})
 })
+
+
 
 app.use('/api/v1/users', userRouter)
 app.use('/api/v1/auth', authRouter)
